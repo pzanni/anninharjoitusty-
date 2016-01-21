@@ -5,10 +5,16 @@ Rahalaskuriin voi kirjata menot ja tulot ja se pitää kirjaa niistä. Rahalasku
 
 #Kaikki käyttäjän toiminnot:
 -palkkatulon merkisteminen
+
 -opintolainan merkitseminen
+
 -opintotuen merkitseminen
+
 -muun tulon merkitseminen
+
 -rahamenon merkitseminen
+
 -kirjattujen tulojen tulostaminen kategorioittain
+
 -kirjattujen menojen tulostaminen kategorioittain
 
