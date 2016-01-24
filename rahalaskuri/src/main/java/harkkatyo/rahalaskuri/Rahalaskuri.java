@@ -32,6 +32,10 @@ public class Rahalaskuri {
                 
                 menot.lisaaMeno(kategoria, arvo);
             }
+            
+            if(komento.equals("3")) {
+                System.out.println(menot.toString());
+            }
         }
     }
 }

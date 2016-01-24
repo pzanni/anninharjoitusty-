@@ -1,12 +1,11 @@
-package testit;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package testit;
 
-import harkkatyo.rahalaskuri.Meno;
+import harkkatyo.rahalaskuri.Menot;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -14,15 +13,12 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author pzanni
- */
-public class MenoTest {
+
+public class MenotTest {
     
-    Meno meno;
+    Menot menot;
     
-    public MenoTest() {
+    public MenotTest() {
     }
     
     @BeforeClass
@@ -35,7 +31,8 @@ public class MenoTest {
     
     @Before
     public void setUp() {
-        meno = new Meno("meno", 5);
+        menot = new Menot();
+        
     }
     
     @After
@@ -48,24 +45,18 @@ public class MenoTest {
     // @Test
     // public void hello() {}
     @Test
-    public void getNimiPalauttaaOikein() {
-        
-        assertEquals("meno", meno.getNimi());
+    public void yhdenMenonLisays() {
+        menot.lisaaMeno("juusto", 60);
+        assertEquals("juusto 60", menot.toString());
     }
     
     @Test
-    public void getArvoPalauttaaOikein() {
-        assertEquals(5, meno.getArvo());
+    public void UseammanMenonLisays() {
+        menot.lisaaMeno("ruoka", 20);
+        menot.lisaaMeno("juoma", 30);
+        assertEquals("ruoka 20\njuoma 30", menot.toString());
     }
     
-    @Test
-    public void toStringPalauttaaOikein() {
-        assertEquals("meno 5", meno.toString());
-    }
     
-    @Test public void arvoonLisaysOnnistuu() {
-        meno.lisaaArvoon(5);
-        assertEquals(10, meno.getArvo());
-    }
     
 }

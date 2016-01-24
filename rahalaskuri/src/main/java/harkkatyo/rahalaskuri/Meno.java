@@ -1,5 +1,6 @@
 
 package harkkatyo.rahalaskuri;
+import java.util.Collections;
 
 
 public class Meno {
@@ -15,4 +16,19 @@ public class Meno {
         arvo = arvo + maara;
         
     }
+    
+    public String getNimi() {
+        return nimi;
+    }
+    
+    public int getArvo() {
+        return arvo;
+    }
+    
+    public String toString() {
+        return nimi + " " + arvo;
+    }
+    
+    
+   
 }
