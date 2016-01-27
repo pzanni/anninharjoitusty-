@@ -1,4 +1,4 @@
-#Annin harjoitustyö: Rahalaskuri
+#Annin harjoitustyö: Rahalaskuri :euro:
 
 #### Rahalaskuri on opiskelijoille suunnattu budjettilaskuri.
 
