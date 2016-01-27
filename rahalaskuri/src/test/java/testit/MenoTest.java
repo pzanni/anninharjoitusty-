@@ -21,51 +21,45 @@ import static org.junit.Assert.*;
 public class MenoTest {
     
     Meno meno;
+    private static final double PIENILUKU = Double.MIN_VALUE;
     
     public MenoTest() {
     }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
+
     @Before
     public void setUp() {
         meno = new Meno("meno", 5);
     }
     
-    @After
-    public void tearDown() {
-    }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
     @Test
-    public void getNimiPalauttaaOikein() {
-        
+    public void getNimiPalauttaaOikein() {       
         assertEquals("meno", meno.getNimi());
     }
     
     @Test
     public void getArvoPalauttaaOikein() {
-        assertEquals(5, meno.getArvo());
+        assertEquals(5.0, meno.getArvo(), PIENILUKU);
     }
     
     @Test
     public void toStringPalauttaaOikein() {
-        assertEquals("meno 5", meno.toString());
+        assertEquals("meno 5.0", meno.toString());
     }
     
     @Test public void arvoonLisaysOnnistuu() {
         meno.lisaaArvoon(5);
-        assertEquals(10, meno.getArvo());
+        assertEquals(10.0, meno.getArvo(), PIENILUKU);
+    }
+    
+    @Test
+    public void negatiivisenArvonLisays() {
+        meno.lisaaArvoon(-3);
+        assertEquals(5, meno.getArvo(), PIENILUKU);
+    }
+    
+    @Test public void negatiivinenArvoNollaantuu() {
+        Meno meno2 = new Meno("meno", -3);
+        assertEquals(0, meno2.getArvo(), PIENILUKU);
     }
     
 }

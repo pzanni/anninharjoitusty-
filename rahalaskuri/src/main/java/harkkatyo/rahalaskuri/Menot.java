@@ -3,6 +3,7 @@ package harkkatyo.rahalaskuri;
 
 import harkkatyo.rahalaskuri.Meno;
 import java.util.HashMap;
+import java.util.Collections;
 
 
 public class Menot {
@@ -12,7 +13,7 @@ public class Menot {
         menot = new HashMap<>();
     }
     
-    public void lisaaMeno(String nimi, int arvo) {
+    public void lisaaMeno(String nimi, double arvo) {
         if(menot.keySet().contains(nimi)) {
             menot.get(nimi).lisaaArvoon(arvo);
         } else {

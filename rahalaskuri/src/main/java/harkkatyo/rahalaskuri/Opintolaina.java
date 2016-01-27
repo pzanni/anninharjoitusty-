@@ -2,6 +2,6 @@
 package harkkatyo.rahalaskuri;
 
 
-public class Opintolaina extends Tulo{
+public class Opintolaina extends Tulot{
     
 }

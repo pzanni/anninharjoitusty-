@@ -2,6 +2,6 @@
 package harkkatyo.rahalaskuri;
 
 
-public class MuuTulo extends Tulo {
+public class MuuTulo extends Tulot {
     
 }

@@ -5,23 +5,30 @@ import java.util.Collections;
 
 public class Meno {
     private String nimi;
-    private int arvo;
+    private double arvo;
     
-    public Meno(String nimi, int arvo) {
+    public Meno(String nimi, double arvo) {
         this.nimi = nimi;
-        this.arvo = arvo;
+        
+        if(arvo > 0) {
+            this.arvo = arvo;
+        } else {
+            this.arvo = 0;
+        }
+        
     }
     
-    public void lisaaArvoon(int maara) {
-        arvo = arvo + maara;
-        
+    public void lisaaArvoon(double maara) {
+        if(maara > 0) {
+            arvo = arvo + maara;
+        }          
     }
     
     public String getNimi() {
         return nimi;
     }
     
-    public int getArvo() {
+    public double getArvo() {
         return arvo;
     }
     

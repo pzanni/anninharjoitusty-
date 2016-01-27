@@ -47,16 +47,22 @@ public class MenotTest {
     @Test
     public void yhdenMenonLisays() {
         menot.lisaaMeno("juusto", 60);
-        assertEquals("juusto 60", menot.toString());
+        assertEquals("juusto 60.0", menot.toString());
     }
     
     @Test
     public void UseammanMenonLisays() {
         menot.lisaaMeno("ruoka", 20);
         menot.lisaaMeno("juoma", 30);
-        assertEquals("ruoka 20\njuoma 30", menot.toString());
+        assertEquals("juoma 30.0\nruoka 20.0", menot.toString());
     }
     
+    @Test 
+    public void arvonKorottaminenKategoriassa () {
+        menot.lisaaMeno("juusto", 10);
+        menot.lisaaMeno("juusto", 5);
+        assertEquals("juusto 15.0", menot.toString());
+    }
     
     
 }
