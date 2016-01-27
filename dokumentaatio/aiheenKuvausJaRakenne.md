@@ -19,5 +19,5 @@ Rahalaskuriin voi kirjata menot ja tulot ja se pitää kirjaa niistä. Rahalasku
 -kirjattujen menojen tulostaminen kategorioittain
 
 ##Luokkakaavio
-![Alt text](~/anninharjoitusty-/dokumentaatio/luokkakaavio.jpg "Luokkakaavio")
+![Luokkakaavio](~/anninharjoitusty-/dokumentaatio/luokkakaavio.jpg "Luokkakaavio")
 
