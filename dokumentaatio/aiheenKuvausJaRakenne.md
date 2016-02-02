@@ -21,5 +21,5 @@ Rahalaskuriin voi kirjata menot ja tulot ja se pitää kirjaa niistä. Rahalasku
 
 ##Luokkakaavio
 
-![luokkakaavio](/home/pzanni/anninharjoitusty-/dokumentaatio/luokkakaavio.JPG)
+![luokkakaavio](https://github.com/pzanni/anninharjoitusty-/blob/master/dokumentaatio/luokkakaavio.JPG?raw=true)
 
