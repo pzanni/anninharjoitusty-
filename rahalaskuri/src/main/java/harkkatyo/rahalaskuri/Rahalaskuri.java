@@ -55,6 +55,14 @@ public class Rahalaskuri {
                 tili = tili + arvo;
                 
                 if (syote.equals("1")) {
+                    tulot.lisaaTukikuukausi();
+                } else if (syote.equals("2")) {
+                    tulot.lisaaOpintolainaan();
+                } else if (syote.equals("3")) {
+                    System.out.println("Anna arvo: ");
+                    double palkka = Double.parseDouble(lukija.nextLine());
+                    tulot.lisaaPalkanmaksu(palkka);
+                } else if (syote.equals("4")) {
                     
                 }
             }

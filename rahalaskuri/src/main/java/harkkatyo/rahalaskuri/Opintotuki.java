@@ -4,13 +4,17 @@ package harkkatyo.rahalaskuri;
 
 public class Opintotuki {
     private double yhteensa;
+    private double nosto;
     private int tukikuukaudet;
     
-    public void lisaaTukikuukausi(double tuet) {
-        
-        if(tuet > 0) {
-            yhteensa = yhteensa + tuet;
-            tukikuukaudet++;    
+    public void lisaaTukikuukausi() {
+        yhteensa = yhteensa + nosto;
+        tukikuukaudet++;
+    }
+    
+    public void asetaOpintotuenMaara(double maara) {
+        if(maara >= 0) {
+            nosto = maara;
         }
     }
     
