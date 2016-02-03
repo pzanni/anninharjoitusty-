@@ -8,8 +8,10 @@ public class Opintotuki {
     private int tukikuukaudet;
     
     public void lisaaTukikuukausi() {
-        yhteensa = yhteensa + nosto;
-        tukikuukaudet++;
+        if(nosto > 0) {
+            yhteensa = yhteensa + nosto;
+            tukikuukaudet++;
+        }
     }
     
     public void asetaOpintotuenMaara(double maara) {
@@ -18,12 +20,8 @@ public class Opintotuki {
         }
     }
     
-    public double getYhteensa() {
-        return yhteensa;
-    }
-    
-    public int getTukikuukaudet() {
-        return tukikuukaudet;
+    public double getNosto() {
+        return nosto;
     }
     
     public String toString() {

@@ -26,28 +26,46 @@ public class OpintotukiTest {
         optuki = new Opintotuki();
     }
     
-    @Test
-    public void tukikuukaudenLisaaminenSummaanOnnistuu() {
-        optuki.lisaaTukikuukausi(350);
-        assertEquals(350, optuki.getYhteensa(), PIENILUKU);
+    @Test 
+    public void tuenMaaranAsettaminenToimii() {
+        optuki.asetaOpintotuenMaara(300);
+        assertEquals(300, optuki.getNosto(), PIENILUKU);
     }
     
     @Test 
-    public void negatiivinenTukituloEiMuutaSummaa() {
-        optuki.lisaaTukikuukausi(-30);
-        assertEquals(0, optuki.getYhteensa(), PIENILUKU);
+    public void eiNegatiivistaTukea() {
+        optuki.asetaOpintotuenMaara(-30);
+        assertEquals(0, optuki.getNosto(), PIENILUKU);
     }
     
     @Test
-    public void lisaaTukikuukausiKorottaaKuukausienArvoa() {
-        optuki.lisaaTukikuukausi(364);
-        assertEquals(1, optuki.getTukikuukaudet());
+    public void tukikuukaudenLisaysToimii() {
+        optuki.asetaOpintotuenMaara(300);
+        optuki.lisaaTukikuukausi();
+        assertEquals("300.0 1kk", optuki.toString());
     }
     
     @Test
-    public void toStringPalauttaaOikein() {
-        optuki.lisaaTukikuukausi(400);
-        optuki.lisaaTukikuukausi(400);
+    public void useatLisayksetSummaantuvat() {
+        optuki.asetaOpintotuenMaara(300);
+        optuki.lisaaTukikuukausi();
+        optuki.lisaaTukikuukausi();
+        optuki.lisaaTukikuukausi();
+        assertEquals("900.0 3kk", optuki.toString());
+    }
+    
+    @Test
+    public void kuukaudetEivatLisaannyIlmanTukea() {
+        optuki.lisaaTukikuukausi();
+        assertEquals("0.0 0kk", optuki.toString());
+    }
+    
+    @Test
+    public void tuenMaaranVaihtoOnnistuu() {
+        optuki.asetaOpintotuenMaara(300);
+        optuki.lisaaTukikuukausi();
+        optuki.asetaOpintotuenMaara(500);
+        optuki.lisaaTukikuukausi();
         assertEquals("800.0 2kk", optuki.toString());
     }
 

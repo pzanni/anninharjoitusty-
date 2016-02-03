@@ -5,6 +5,7 @@ package harkkatyo.rahalaskuri;
 public class Palkka {
     private double arvo;
     private double tuloraja;
+    private double kausi;
     
     public Palkka() {
         tuloraja = Double.MAX_VALUE;
@@ -28,10 +29,10 @@ public class Palkka {
     }
     
     public String toString() {
-        if(tuloraja > 0) {
-            return arvo + "/" + tuloraja;
+        if(tuloraja != Double.MAX_VALUE) {
+            return "Yhteensä " + arvo + "/" + tuloraja;
         } else {
-            return arvo + "";
+            return "Yhteensä " + arvo;
         }
     }
 }

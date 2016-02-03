@@ -13,11 +13,17 @@ public class Opintolaina {
     public void vaihdaOpintolaina(double uusiNosto) {
         if (uusiNosto >= 0) {
             nosto = uusiNosto;
+        } else {
+            System.out.println("Et voi nostaa negatiivista lainaa");
         }
     }
     
     public void lisaaOpintolainaan() {
         arvo = arvo + nosto;
+    }
+    
+    public String toString() {
+        return "Yhteensä " + arvo;
     }
     
     
