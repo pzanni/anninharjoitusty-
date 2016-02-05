@@ -14,3 +14,6 @@
 
 ## 3.2. 2016
 2h: Lisää koodin ja testien tekemistä
+
+## 5.2.2016
+30min: Pit raportin uusiminen ja luokkakaavion päivitys
