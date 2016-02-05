@@ -65,9 +65,11 @@ public class TulotTest {
     
     @Test
     public void useanMuunTulonLisaysOnnistuu() {
-        tulot.lisaaMuuTulo("mutsi", 100);
-        tulot.lisaaMuuTulo("sugardaddy", 500);
-        assertEquals("mutsi 100.0\nsugardaddy 500.0", tulot.MuutTulotString());
+        Tulot tulot2 = new Tulot();
+        tulot2.lisaaMuuTulo("mutsi", 100);
+        tulot2.lisaaMuuTulo("sugardaddy", 500);
+        System.out.println(tulot2.MuutTulotString());
+        assertEquals("mutsi 100.0\nsugardaddy 500.0", tulot2.MuutTulotString());
     }
     
     
