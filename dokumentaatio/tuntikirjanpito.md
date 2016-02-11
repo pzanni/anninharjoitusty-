@@ -20,3 +20,6 @@
 
 ## 11.2.2016
 2h: Koodin edistämistä ja testien tekemistä
+
+## 11.2.2016
+1h: Pit raportin päivitys, checkstyle generointi, javadoc asennus
