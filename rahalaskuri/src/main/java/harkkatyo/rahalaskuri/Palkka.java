@@ -13,7 +13,7 @@ public class Palkka {
     
     public void lisaaPalkanmaksu(double palkka) {
         if(palkka > 0) {
-            kausi = kausi + palkka;
+            arvo = arvo + palkka;
         }
         
         if(tuloraja <= arvo) {
@@ -30,7 +30,7 @@ public class Palkka {
     
     public String toString() {
         if(tuloraja != Double.MAX_VALUE) {
-            return "Yhteensä " + arvo + "/" + tuloraja + "\nYhteensä: " + arvo;
+            return "Yhteensä " + arvo + "/" + tuloraja;
         } else {
             return "Yhteensä " + arvo;
         }
