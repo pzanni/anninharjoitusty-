@@ -1,7 +1,10 @@
 
 package harkkatyo.rahalaskuri;
 
-
+/** Opintolaina-luokka.
+ * 
+ * @author pzanni
+ */
 public class Opintolaina {
     private double nosto;
     private double arvo;
@@ -10,6 +13,10 @@ public class Opintolaina {
         nosto = 400;
     }
     
+    /**
+     * Tämä metodi vaihtaa opintolainan.
+     * @param uusiNosto 
+     */
     public void vaihdaOpintolaina(double uusiNosto) {
         if (uusiNosto >= 0) {
             nosto = uusiNosto;

@@ -1,7 +1,10 @@
 
 package harkkatyo.rahalaskuri;
 
-
+/** Tämä luokka mallintaa palkkatulon.
+ * 
+ * @author pzanni
+ */
 public class Palkka {
     private double arvo;
     private double tuloraja;
