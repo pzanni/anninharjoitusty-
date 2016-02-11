@@ -50,25 +50,33 @@ public class Rahalaskuri {
                 
                 String syote = lukija.nextLine();
                 
-                System.out.println("Anna arvo: ");
-                double arvo = Double.parseDouble(lukija.nextLine());
-                tili = tili + arvo;
-                
                 if (syote.equals("1")) {
                     tulot.lisaaTukikuukausi();
+                    tili = tili + tulot.getOpintotuki().getNosto();
                 } else if (syote.equals("2")) {
                     tulot.lisaaOpintolainaan();
+                    tili = tili + tulot.getOpintolaina().getNosto();
                 } else if (syote.equals("3")) {
                     System.out.println("Anna arvo: ");
                     double palkka = Double.parseDouble(lukija.nextLine());
                     tulot.lisaaPalkanmaksu(palkka);
+                    tili = tili + palkka;
                 } else if (syote.equals("4")) {
-                    
+                    System.out.println("Anna kategoria: ");
+                    String kategoria = lukija.nextLine();
+                    System.out.println("Anna arvo: ");
+                    double muuarvo = Double.parseDouble(lukija.nextLine());
+                    tulot.lisaaMuuTulo(kategoria, muuarvo);
+                    tili = tili + muuarvo;
                 }
             }
             
             if(komento.equals("3")) {
                 System.out.println(menot.toString());
+            }
+            
+            if(komento.equals("4")) {
+                System.out.println(tulot.toString());
             }
         }
     }

@@ -19,6 +19,7 @@ import static org.junit.Assert.*;
  */
 public class TulotTest {
     Tulot tulot;
+    private static final double PIENILUKU = Double.MIN_VALUE;
     
     @Before
     public void setUp() {
@@ -71,6 +72,37 @@ public class TulotTest {
         System.out.println(tulot2.MuutTulotString());
         assertEquals("mutsi 100.0\nsugardaddy 500.0", tulot2.MuutTulotString());
     }
+    @Test 
+    public void yhteislaskuOpintotuenKanssa() {
+        tulot.vaihdaOpintotuenMaara(350);
+        tulot.lisaaTukikuukausi();
+        assertEquals(350, tulot.getYhteensa(), PIENILUKU);
+    }
+     
+    @Test
+    public void yhteislaskuOpintolainanKanssa() {
+        tulot.lisaaOpintolainaan();
+        assertEquals(400, tulot.getYhteensa(), PIENILUKU);
+    }
     
+    @Test
+    public void yhteislaskuPalkanKanssa() {
+        tulot.lisaaPalkanmaksu(400);
+        assertEquals(400, tulot.getYhteensa(), PIENILUKU);
+    }
     
+    @Test
+    public void yhteislaskuMuunTulonKanssa() {
+        tulot.lisaaMuuTulo("mutsi", 40);
+        assertEquals(40, tulot.getYhteensa(), PIENILUKU);
+    }
+    
+    @Test
+    public void yhteislaskuMonenTulonKanssa() {
+        tulot.lisaaOpintolainaan();
+        tulot.lisaaMuuTulo("vaari", 100);
+        tulot.vaihdaOpintotuenMaara(200);
+        tulot.lisaaTukikuukausi();
+        assertEquals(700, tulot.getYhteensa(), PIENILUKU);
+    }
 }

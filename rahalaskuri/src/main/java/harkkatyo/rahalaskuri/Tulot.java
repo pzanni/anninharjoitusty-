@@ -15,21 +15,21 @@ public class Tulot {
     
     
     public Tulot() {
-        opintotuki = null;
-        opintolaina = null;
-        palkka = null;
+        opintotuki = new Opintotuki();
+        opintolaina = new Opintolaina();
+        palkka = new Palkka();
         lukija = new Scanner(System.in);
         muut = new HashMap<>();
     }
     
     public void lisaaTukikuukausi() {
-        if (opintotuki == null) {
-            opintotuki = new Opintotuki();
+        if (opintotuki.getNosto() == 0) {
             System.out.println("Kuukausittainen opintotuen määrä: ");
             Double maara = Double.parseDouble(lukija.nextLine());
             opintotuki.asetaOpintotuenMaara(maara);
         }
         opintotuki.lisaaTukikuukausi();
+        yhteensa = yhteensa + opintotuki.getNosto();
     }
  
     public void vaihdaOpintotuenMaara(double arvo) {
@@ -40,33 +40,23 @@ public class Tulot {
     }
     
     public void lisaaOpintolainaan() {
-        if(opintolaina == null) {
-            opintolaina = new Opintolaina();
-            System.out.println("Oletus: laina 400/kk");
-        }
         opintolaina.lisaaOpintolainaan();
+        yhteensa = yhteensa + opintolaina.getNosto();
     }
     
     public void vaihdaOpintolaina(double arvo) {
-        if(opintolaina == null) {
-            opintolaina = new Opintolaina();
-        }
         opintolaina.vaihdaOpintolaina(arvo);
     }
     
-    public void lisaaPalkanmaksu(double arvo) {
-        if(palkka == null) {
-            palkka = new Palkka();            
-        }    
+    public void lisaaPalkanmaksu(double arvo) {  
         palkka.lisaaPalkanmaksu(arvo);
+        yhteensa = yhteensa + arvo;
     }
     
     public void lisaaTuloraja(double arvo) {
-        if(palkka == null) {
-            palkka = new Palkka();
-        }
         palkka.lisaaTuloraja(arvo);
     }
+    
     
     public void lisaaMuuTulo(String kategoria, double arvo) {
         if(muut.containsKey(kategoria)) {
@@ -74,6 +64,7 @@ public class Tulot {
         } else {
             muut.put(kategoria, new MuuTulo(kategoria, arvo));
         }
+        yhteensa = yhteensa + arvo;
     }
     
     public String MuutTulotString() {
@@ -101,6 +92,14 @@ public class Tulot {
     
     public Palkka getPalkka() {
         return palkka;
+    }
+    
+    public Double getYhteensa() {
+        return yhteensa;
+    }
+    
+    public String toString() {
+        return "Opintotuki: " + opintotuki.toString() + "\nOpintolaina: " + opintolaina.toString() + "\nPalkka: " + palkka.toString() + "\n" + this.MuutTulotString() + "\nYhteensä: " + yhteensa;
     }
     
 }

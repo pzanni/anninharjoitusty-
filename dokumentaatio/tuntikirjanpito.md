@@ -17,3 +17,6 @@
 
 ## 5.2.2016
 30min: Pit raportin uusiminen ja luokkakaavion päivitys
+
+## 11.2.2016
+2h: Koodin edistämistä ja testien tekemistä

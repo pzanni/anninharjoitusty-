@@ -26,5 +26,8 @@ public class Opintolaina {
         return "Yhteensä " + arvo;
     }
     
+    public double getNosto() {
+        return nosto;
+    }
     
 }

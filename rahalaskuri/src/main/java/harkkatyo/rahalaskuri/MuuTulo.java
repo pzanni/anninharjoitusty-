@@ -8,12 +8,12 @@ public class MuuTulo {
     
     public MuuTulo(String nimi, double arvo) {
         kategoria = nimi;
-        yhteensa = yhteensa + yhteensa;
+        yhteensa = yhteensa + arvo;
     }
     
     public void lisaaArvoon(double arvo) {
         if(arvo > 0) {
-            yhteensa = yhteensa + yhteensa;
+            yhteensa = yhteensa + arvo;
         }
     }
     

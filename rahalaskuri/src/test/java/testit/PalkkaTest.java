@@ -25,7 +25,7 @@ public class PalkkaTest {
     @Test
     public void palkanLisaysOnnistuu() {
         palkka.lisaaPalkanmaksu(200);
-        assertEquals("Yhteensä 200.0", palkka.toString());
+        assertEquals("Kausi 200.0", palkka.toString());
     }
     
     @Test
@@ -57,5 +57,6 @@ public class PalkkaTest {
         palkka.lisaaPalkanmaksu(50);
         assertEquals("Yhteensä 50.0", palkka.toString());
     }
-
+    
+    
 }
