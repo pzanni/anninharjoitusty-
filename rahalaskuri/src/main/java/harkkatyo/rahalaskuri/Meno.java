@@ -1,7 +1,11 @@
 
 package harkkatyo.rahalaskuri;
 import java.util.Collections;
-
+/**
+ * Meno-luokkaan käyttäjä voi tallentaa itse nimeämänsä rahamenon ja 
+ * kasvattaa sen arvoa halutessaan.
+ * @author pzanni
+ */
 
 public class Meno {
     private String nimi;

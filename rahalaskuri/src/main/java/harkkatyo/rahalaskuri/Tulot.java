@@ -4,6 +4,12 @@ package harkkatyo.rahalaskuri;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/**
+ * Tulot-luokka vastaa kaikista tuloista ja niihin liittyvistä olioista eli kaikki
+ * tuloihin liittyvät toiminnot menevät tulot-luokan kautta, tulot-luokka myös 
+ * vastaa käyttäjän merkitsemien tulojen yhteenvedosta.
+ * @author pzanni
+ */
 
 public class Tulot {
     private Opintotuki opintotuki;

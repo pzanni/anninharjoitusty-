@@ -1,7 +1,9 @@
 
 package harkkatyo.rahalaskuri;
 
-/** Tämä luokka mallintaa palkkatulon.
+/** Palkka-luokka muistaa käyttäjän tienaamat palkat summattuna yhteensä-lukuna 
+ * ja käyttäjä voi halutessaan asettaa tulorajan joka ilmoittaa täyttyessään 
+ * (mahd tulevaisuudessa myös hieman ennen kuin täyttyy).
  * 
  * @author pzanni
  */

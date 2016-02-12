@@ -1,7 +1,11 @@
 
 package harkkatyo.rahalaskuri;
 
-
+/**
+ * MuuTulo-luokka vastaa tuloista jotka eivät sovi muihin tulo-luokkiin, luokka 
+ * tallentaa käyttäjän valitseman nimen oliolle sekä arvon ja arvoa voi aina kohottaa.
+ * @author pzanni
+ */
 public class MuuTulo {
     private double yhteensa;
     private String kategoria;

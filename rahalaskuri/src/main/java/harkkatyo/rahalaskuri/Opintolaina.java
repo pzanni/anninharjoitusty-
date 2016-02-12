@@ -1,7 +1,8 @@
 
 package harkkatyo.rahalaskuri;
 
-/** Opintolaina-luokka.
+/** Opintolaina-luokka pitää kirjaa nostetusta lainoista ja nykyisestä noston 
+ *  määrästä jota voi halutessaan muuttaa (oletus 400).
  * 
  * @author pzanni
  */

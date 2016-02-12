@@ -1,10 +1,16 @@
 
 package harkkatyo.rahalaskuri;
 
+
 import harkkatyo.rahalaskuri.Meno;
 import java.util.HashMap;
 import java.util.Collections;
 
+/**
+ * Menot-luokkaan on säilötty kaikki meno-oliot ja niitä pystyy menot-luokasta 
+ * säätelemään, kuten tulostamaan ja lisäämään uuden meno-olion tai kohottamaan vanhan arvoa.
+ * @author pzanni
+ */
 
 public class Menot {
     private HashMap<String, Meno> menot;

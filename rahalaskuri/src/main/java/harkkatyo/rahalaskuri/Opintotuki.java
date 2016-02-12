@@ -1,6 +1,12 @@
 
 package harkkatyo.rahalaskuri;
 
+/**
+ * Opintotuki-luokka pitää kirjaa nostetun opintotuen yhteissummasta sekä 
+ * käytetyistä tukikuukausista, luokka myös muistaa kuukausittaisen opintotuen
+ * määrän ja sitä voi halutessaan vaihtaa.
+ * @author pzanni
+ */
 
 public class Opintotuki {
     private double yhteensa;
