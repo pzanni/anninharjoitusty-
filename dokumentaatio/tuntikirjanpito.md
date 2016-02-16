@@ -24,5 +24,8 @@
 ## 11.2.2016
 1h: Pit raportin päivitys, checkstyle generointi, javadoc asennus
 
-## 16.2. 2016
+## 16.2.2016
 1,5h: Koodin muokkaaminen, uusien luokkien kuvaamista javadociin
+
+## 16.2.2016
+1h: Käyttöohjeiden kirjoittaminen ja luokkakaavion päivitys
