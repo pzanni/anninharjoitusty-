@@ -2,7 +2,6 @@
 package harkkatyo.rahalaskuri;
 
 import java.util.HashMap;
-import java.util.Scanner;
 
 /**
  * Tulot-luokka vastaa kaikista tuloista ja niihin liittyvistä olioista eli kaikki
@@ -16,22 +15,22 @@ public class Tulot {
     private Opintolaina opintolaina;
     private Palkka palkka;
     private double yhteensa;
-    private Scanner lukija;
     private HashMap<String, MuuTulo> muut;
+    private Kysyja kysyja;
     
     
     public Tulot() {
         opintotuki = new Opintotuki();
         opintolaina = new Opintolaina();
         palkka = new Palkka();
-        lukija = new Scanner(System.in);
         muut = new HashMap<>();
+        kysyja = new Kysyja();
     }
     
     public void lisaaTukikuukausi() {
         if (opintotuki.getNosto() == 0) {
             System.out.println("Kuukausittainen opintotuen määrä: ");
-            Double maara = Double.parseDouble(lukija.nextLine());
+            Double maara = kysyja.liukuluku();
             opintotuki.asetaOpintotuenMaara(maara);
         }
         opintotuki.lisaaTukikuukausi();
@@ -45,6 +44,14 @@ public class Tulot {
         opintotuki.asetaOpintotuenMaara(arvo);
     }
     
+    public void nollaaTukienArvo() {
+        opintotuki.nollaaArvo();
+    }
+    
+    public void nollaaTukikuukaudet() {
+        opintotuki.nollaaKuukaudet();
+    }
+    
     public void lisaaOpintolainaan() {
         opintolaina.lisaaOpintolainaan();
         yhteensa = yhteensa + opintolaina.getNosto();
@@ -54,6 +61,10 @@ public class Tulot {
         opintolaina.vaihdaOpintolaina(arvo);
     }
     
+    public void vahennaOpintolainaa(double arvo) {
+        opintolaina.vahenna(arvo);
+    }
+    
     public void lisaaPalkanmaksu(double arvo) {  
         palkka.lisaaPalkanmaksu(arvo);
         yhteensa = yhteensa + arvo;
@@ -61,6 +72,10 @@ public class Tulot {
     
     public void lisaaTuloraja(double arvo) {
         palkka.lisaaTuloraja(arvo);
+    }
+    
+    public void nollaaPalkanArvo() {
+        palkka.nollaaArvo();
     }
     
     

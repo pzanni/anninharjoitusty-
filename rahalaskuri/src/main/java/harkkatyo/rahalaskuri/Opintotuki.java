@@ -33,4 +33,12 @@ public class Opintotuki {
     public String toString() {
         return yhteensa + " " + tukikuukaudet + "kk";
     }
+    
+    public void nollaaArvo() {
+        yhteensa = 0;
+    }
+    
+    public void nollaaKuukaudet() {
+        tukikuukaudet = 0;
+    }
 }

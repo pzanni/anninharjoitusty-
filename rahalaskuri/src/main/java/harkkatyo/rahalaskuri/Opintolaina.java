@@ -30,6 +30,14 @@ public class Opintolaina {
         arvo = arvo + nosto;
     }
     
+    public void vahenna(double vahennys) {
+        if(vahennys > 0) {
+            arvo = arvo - vahennys;
+        } else if (vahennys < 0) {
+            arvo = arvo + vahennys;
+        }
+    }
+    
     public String toString() {
         return "Yhteensä " + arvo;
     }

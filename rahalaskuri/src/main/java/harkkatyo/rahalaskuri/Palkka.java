@@ -10,7 +10,6 @@ package harkkatyo.rahalaskuri;
 public class Palkka {
     private double arvo;
     private double tuloraja;
-    private double kausi;
     
     public Palkka() {
         tuloraja = Double.MAX_VALUE;
@@ -31,6 +30,10 @@ public class Palkka {
         if(raja > 0) {
             tuloraja = raja;
         }
+    }
+    
+    public void nollaaArvo() {
+        arvo = 0;
     }
     
     public String toString() {
