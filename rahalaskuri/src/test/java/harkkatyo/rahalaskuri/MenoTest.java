@@ -1,4 +1,4 @@
-package testit;
+package harkkatyo.rahalaskuri;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -62,4 +62,9 @@ public class MenoTest {
         assertEquals(0, meno2.getArvo(), PIENILUKU);
     }
     
+    @Test 
+    public void nollausToimii() {
+        meno.nollaaArvo();
+        assertEquals(0, meno.getArvo(), PIENILUKU);
+    }
 }

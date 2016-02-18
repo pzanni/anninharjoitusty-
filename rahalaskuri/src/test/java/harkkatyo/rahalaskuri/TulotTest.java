@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package testit;
+package harkkatyo.rahalaskuri;
 
 import harkkatyo.rahalaskuri.Tulot;
 import org.junit.After;
@@ -104,5 +104,42 @@ public class TulotTest {
         tulot.vaihdaOpintotuenMaara(200);
         tulot.lisaaTukikuukausi();
         assertEquals(700, tulot.getYhteensa(), PIENILUKU);
+    }
+    
+    @Test
+    public void tukienArvonNollaaminenOnnistuu() {
+        tulot.vaihdaOpintotuenMaara(350);
+        tulot.lisaaTukikuukausi();
+        tulot.nollaaTukienArvo();
+        assertEquals("0.0 1kk", tulot.getOpintotuki().toString());
+    }
+    
+    @Test 
+    public void tukikuukauksienNollaaminenOnnistuu() {
+        tulot.vaihdaOpintotuenMaara(300);
+        tulot.lisaaTukikuukausi();
+        tulot.nollaaTukikuukaudet();
+        assertEquals("300.0 0kk", tulot.getOpintotuki().toString());
+    }
+    
+    @Test 
+    public void opintolainanVahennysOnnistuuPosNumerolla() {
+        tulot.lisaaOpintolainaan();
+        tulot.vahennaOpintolainaa(200);
+        assertEquals("Yhteensä 200.0", tulot.getOpintolaina().toString());
+    }
+    
+    @Test 
+    public void opintolainanVahennysOnnistuuNegNumerolla() {
+        tulot.lisaaOpintolainaan();
+        tulot.vahennaOpintolainaa(-200);
+        assertEquals("Yhteensä 200.0", tulot.getOpintolaina().toString());
+    }
+    
+    @Test
+    public void palkanArvonNollausOnnistuu() {
+        tulot.lisaaPalkanmaksu(150);
+        tulot.nollaaPalkanArvo();
+        assertEquals("Yhteensä 0.0", tulot.getOpintolaina().toString());
     }
 }

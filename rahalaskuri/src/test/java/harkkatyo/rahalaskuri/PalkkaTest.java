@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package testit;
+package harkkatyo.rahalaskuri;
 
 import harkkatyo.rahalaskuri.Palkka;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,9 +19,20 @@ import static org.junit.Assert.*;
 public class PalkkaTest {
     Palkka palkka;
     
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    
     @Before
     public void setUp() {
         palkka = new Palkka();
+        
+        System.setOut(new PrintStream(outContent));
+        
+    }
+    
+    @After
+    public void cleanUpStreams(){
+        System.setOut(null);
+        
     }
     
     @Test
@@ -56,6 +69,13 @@ public class PalkkaTest {
         palkka.lisaaTuloraja(-30);
         palkka.lisaaPalkanmaksu(50);
         assertEquals("Yhteensä 50.0", palkka.toString());
+    }
+    
+    @Test
+    public void tulorajanTayttymisestaIlmoitetaan() {
+        palkka.lisaaTuloraja(100);
+        palkka.lisaaPalkanmaksu(120);
+        assertEquals("Tuloraja täynnä.\n", outContent.toString());
     }
     
     

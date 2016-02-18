@@ -1,5 +1,5 @@
 
-package testit;
+package harkkatyo.rahalaskuri;
 
 import harkkatyo.rahalaskuri.MuuTulo;
 import org.junit.After;

@@ -29,3 +29,7 @@
 
 ## 16.2.2016
 1h: Käyttöohjeiden kirjoittaminen ja luokkakaavion päivitys
+
+##18.2.2016
+2,5h: Kuvausten kirjoittaminen kaikille metodeille, lisää hallinnointi ominaisuuksia, lisää testejä (en osaa testata metodeita joissa input joten testikattavuus vielä huono)
+

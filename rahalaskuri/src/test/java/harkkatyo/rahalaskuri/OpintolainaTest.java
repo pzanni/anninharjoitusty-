@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package testit;
+package harkkatyo.rahalaskuri;
 
 import harkkatyo.rahalaskuri.Opintolaina;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -52,6 +53,20 @@ public class OpintolainaTest {
         laina.vaihdaOpintolaina(-300);
         laina.lisaaOpintolainaan();
         assertEquals("Yhteensä 400.0", laina.toString());
+    }
+    
+    @Test
+    public void lainanVahennysOnnistuuPositiivisella() {
+        laina.lisaaOpintolainaan();
+        laina.vahenna(100);
+        assertEquals("Yhteensä 300.0", laina.toString());        
+    }
+    
+    @Test
+    public void lainanVahennysOnnistuuNegatiivisella() {
+        laina.lisaaOpintolainaan();
+        laina.vahenna(-100);
+        assertEquals("Yhteensä 300.0", laina.toString());
     }
    
 
