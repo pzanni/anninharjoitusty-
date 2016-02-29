@@ -1,5 +1,6 @@
-package harkkatyo.rahalaskuri;
+package harkkatyo.rahalaskuri.tulot;
 
+import harkkatyo.rahalaskuri.Kysyja;
 import java.util.HashMap;
 
 /**
@@ -131,12 +132,45 @@ public class Tulot {
      * @param arvo
      */
     public void lisaaMuuTulo(String kategoria, double arvo) {
-        if (muut.containsKey(kategoria)) {
+        if (muut.containsKey(kategoria) && arvo > 0) {
             muut.get(kategoria).lisaaArvoon(arvo);
-        } else {
+        } else if (arvo > 0) {
             muut.put(kategoria, new MuuTulo(kategoria, arvo));
         }
         yhteensa = yhteensa + arvo;
+
+    }
+
+    /**
+     * metodi tarkastaa ensin onko muut-hashmapissa parametrina saatua
+     * merkkijonoa avaimena, jos on niin se laittaa kys avaimen kohdalle uuden
+     * muutulo-olion jonka arvo on 0.
+     *
+     * @param kategoria
+     */
+    public void nollaaKategoria(String kategoria) {
+        if (muut.containsKey(kategoria)) {
+            muut.put(kategoria, new MuuTulo(kategoria, 0));
+        }
+    }
+
+    /**
+     * metodi tarkastaa ensin onko hashmapissä parametrina saatua avainta, jos
+     * on niin metodi poistaa kyseisen avaimen ja sen arvon.
+     *
+     * @param kategoria
+     */
+    public void poistaKategoria(String kategoria) {
+        if (muut.containsKey(kategoria)) {
+            muut.remove(kategoria);
+        }
+    }
+
+    /**
+     * metodi tyhjentää muut-hashmapin kokonaan.
+     */
+    public void poistaKaikki() {
+        muut.clear();
     }
 
     /**
@@ -145,7 +179,7 @@ public class Tulot {
      *
      * @return
      */
-    public String MuutTulotString() {
+    public String muutTulotString() {
         String palautus = "";
         int i = 0;
         for (String nimi : muut.keySet()) {
@@ -177,7 +211,7 @@ public class Tulot {
     }
 
     public String toString() {
-        return "Opintotuki: " + opintotuki.toString() + "\nOpintolaina: " + opintolaina.toString() + "\nPalkka: " + palkka.toString() + "\n" + this.MuutTulotString() + "\nYhteensä: " + yhteensa;
+        return "Opintotuki: " + opintotuki.toString() + "\nOpintolaina: " + opintolaina.toString() + "\nPalkka: " + palkka.toString() + "\n" + this.muutTulotString() + "\nYhteensä: " + yhteensa;
     }
 
 }

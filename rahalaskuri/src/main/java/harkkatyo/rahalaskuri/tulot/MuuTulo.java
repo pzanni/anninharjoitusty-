@@ -1,4 +1,4 @@
-package harkkatyo.rahalaskuri;
+package harkkatyo.rahalaskuri.tulot;
 
 /**
  * MuuTulo-luokka vastaa tuloista jotka eivät sovi muihin tulo-luokkiin, luokka

@@ -1,6 +1,5 @@
-package harkkatyo.rahalaskuri;
+package harkkatyo.rahalaskuri.menot;
 
-import harkkatyo.rahalaskuri.Meno;
 import java.util.HashMap;
 import java.util.Collections;
 
@@ -29,9 +28,9 @@ public class Menot {
      * @param arvo
      */
     public void lisaaMeno(String nimi, double arvo) {
-        if (menot.keySet().contains(nimi)) {
+        if (menot.keySet().contains(nimi) && arvo > 0) {
             menot.get(nimi).lisaaArvoon(arvo);
-        } else {
+        } else if (arvo > 0) {
             menot.put(nimi, new Meno(nimi, arvo));
         }
     }

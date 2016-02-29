@@ -1,4 +1,7 @@
-package harkkatyo.rahalaskuri;
+package harkkatyo.rahalaskuri.komennot;
+
+import harkkatyo.rahalaskuri.Kysyja;
+import harkkatyo.rahalaskuri.menot.Menot;
 
 /**
  * LisaaMeno-luokka vastaa menoihin liittyvien komentojen tarkentamisesta ja

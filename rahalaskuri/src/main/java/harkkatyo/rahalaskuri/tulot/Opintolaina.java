@@ -1,4 +1,4 @@
-package harkkatyo.rahalaskuri;
+package harkkatyo.rahalaskuri.tulot;
 
 /**
  * Opintolaina-luokka pitää kirjaa nostetusta lainoista ja nykyisestä noston
@@ -23,10 +23,10 @@ public class Opintolaina {
      * @param uusiNosto
      */
     public void vaihdaOpintolaina(double uusiNosto) {
-        if (uusiNosto >= 0) {
+        if (uusiNosto >=0) {
             nosto = uusiNosto;
         } else {
-            System.out.println("Et voi nostaa negatiivista lainaa");
+            System.out.println("Lainan tulee olla positiivinen luku.");
         }
     }
 

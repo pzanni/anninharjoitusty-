@@ -1,4 +1,7 @@
-package harkkatyo.rahalaskuri;
+package harkkatyo.rahalaskuri.komennot;
+
+import harkkatyo.rahalaskuri.Kysyja;
+import harkkatyo.rahalaskuri.tulot.Tulot;
 
 /**
  * LisaaTulo-luokka vastaa tuloihin liittyvistä komentojen välittämisestä ja
@@ -54,10 +57,37 @@ public class LisaaTulo {
      */
     public void muutulo() {
         System.out.println("Anna kategoria");
-        String kategoria = kysyja.merkkijono();
+        String kategoria = kysyja.trimmattuMerkkijono();
         System.out.println("Anna arvo");
         double arvo = kysyja.liukuluku();
         tulot.lisaaMuuTulo(kategoria, arvo);
+    }
+
+    /**
+     * metodi kysyy käyttäjältä kategorian ja antaa syötetyn merkkijonon
+     * eteenpäin tulot-luokalle.
+     */
+    public void nollaaKategoria() {
+        System.out.println("Anna kategoria");
+        String kategoria = kysyja.trimmattuMerkkijono();
+        tulot.nollaaKategoria(kategoria);
+    }
+
+    /**
+     * metodi kysyy käyttäjältä poistettavan kategorian ja antaa annetun
+     * merkkijonon eteenpäin tulot-luokan metodille.
+     */
+    public void poistaKategoria() {
+        System.out.println("Anna kategoria");
+        String kategoria = kysyja.trimmattuMerkkijono();
+        tulot.poistaKategoria(kategoria);
+    }
+
+    /**
+     * metodi kutsuu tulot-luokan metodia.
+     */
+    public void poistaKaikki() {
+        tulot.poistaKaikki();
     }
 
     public String toString() {

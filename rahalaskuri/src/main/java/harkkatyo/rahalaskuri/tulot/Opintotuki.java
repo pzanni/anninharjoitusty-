@@ -1,4 +1,4 @@
-package harkkatyo.rahalaskuri;
+package harkkatyo.rahalaskuri.tulot;
 
 /**
  * Opintotuki-luokka pitää kirjaa nostetun opintotuen yhteissummasta sekä

@@ -1,4 +1,4 @@
-package harkkatyo.rahalaskuri;
+package harkkatyo.rahalaskuri.menot;
 
 import java.util.Collections;
 

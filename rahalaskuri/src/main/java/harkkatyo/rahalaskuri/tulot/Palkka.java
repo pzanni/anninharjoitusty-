@@ -1,4 +1,4 @@
-package harkkatyo.rahalaskuri;
+package harkkatyo.rahalaskuri.tulot;
 
 /**
  * Palkka-luokka muistaa käyttäjän tienaamat palkat summattuna yhteensä-lukuna
@@ -46,7 +46,7 @@ public class Palkka {
     }
 
     /**
-     * nollaaArvo-metodi asettaa luokan arvo-muuttujan arvoksi 0;
+     * nollaaArvo-metodi asettaa luokan arvo-muuttujan arvoksi 0.
      */
     public void nollaaArvo() {
         arvo = 0;

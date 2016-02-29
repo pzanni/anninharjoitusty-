@@ -3,9 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package harkkatyo.rahalaskuri;
+package harkkatyo.rahalaskuri.tulotestit;
 
-import harkkatyo.rahalaskuri.Opintolaina;
+import harkkatyo.rahalaskuri.tulot.Opintolaina;
+import harkkatyo.rahalaskuri.tulot.Opintolaina;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -19,19 +22,28 @@ import static org.junit.Assert.*;
  * @author pzanni
  */
 public class OpintolainaTest {
-    
+
     Opintolaina laina;
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+
     @Before
     public void setUp() {
         laina = new Opintolaina();
+        System.setOut(new PrintStream(outContent));
     }
     
+    @After
+    public void cleanUpStreams() {
+        System.setOut(null);
+
+    }
+
     @Test
     public void oletusLainaOn400() {
         laina.lisaaOpintolainaan();
         assertEquals("Yhteensä 400.0", laina.toString());
     }
-    
+
     @Test
     public void lainanVaihtoOnnistuu() {
         laina.vaihdaOpintolaina(600);
@@ -40,6 +52,12 @@ public class OpintolainaTest {
     }
     
     @Test
+    public void ilmoittaaNegatiivisestaLainasta() {
+        laina.vaihdaOpintolaina(-300);
+        assertEquals("Lainan tulee olla positiivinen luku.\n", outContent.toString());
+    }
+
+    @Test
     public void montaLisaystaSummaantuu() {
         laina.lisaaOpintolainaan();
         laina.lisaaOpintolainaan();
@@ -47,28 +65,19 @@ public class OpintolainaTest {
         laina.lisaaOpintolainaan();
         assertEquals("Yhteensä 1000.0", laina.toString());
     }
-    
-    @Test
-    public void negatiivinenLainaEiMahdollinen() {
-        laina.vaihdaOpintolaina(-300);
-        laina.lisaaOpintolainaan();
-        assertEquals("Yhteensä 400.0", laina.toString());
-    }
-    
+
     @Test
     public void lainanVahennysOnnistuuPositiivisella() {
         laina.lisaaOpintolainaan();
         laina.vahenna(100);
-        assertEquals("Yhteensä 300.0", laina.toString());        
+        assertEquals("Yhteensä 300.0", laina.toString());
     }
-    
+
     @Test
     public void lainanVahennysOnnistuuNegatiivisella() {
         laina.lisaaOpintolainaan();
         laina.vahenna(-100);
         assertEquals("Yhteensä 300.0", laina.toString());
     }
-   
 
-    
 }

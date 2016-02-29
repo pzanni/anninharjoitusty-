@@ -40,6 +40,21 @@
                     <targetTests>
                         <param>harkkatyo.rahalaskuri.*</param>
                     </targetTests>
+                    <targetClasses>
+                        <param>harkkatyo.rahalaskuri.menotestit.*</param>
+                    </targetClasses>
+                    <targetClasses>
+                        <param>harkkatyo.rahalaskuri.tulotestit.*</param>
+                    </targetClasses>
+                    <targetClasses>
+                        <param>harkkatyo.rahalaskuri.komennot.*</param>
+                    </targetClasses>
+                    <targetClasses>
+                        <param>harkkatyo.rahalaskuri.menot.*</param>
+                    </targetClasses>
+                    <targetClasses>
+                        <param>harkkatyo.rahalaskuri.tulot.*</param>
+                    </targetClasses>
                 </configuration>
             </plugin>
         

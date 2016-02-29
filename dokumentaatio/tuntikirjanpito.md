@@ -33,3 +33,5 @@
 ##18.2.2016
 2,5h: Kuvausten kirjoittaminen kaikille metodeille, lisää hallinnointi ominaisuuksia, lisää testejä (en osaa testata metodeita joissa input joten testikattavuus vielä huono)
 
+##29.2.2016
+2h: koodin ja testien viimeistelyä

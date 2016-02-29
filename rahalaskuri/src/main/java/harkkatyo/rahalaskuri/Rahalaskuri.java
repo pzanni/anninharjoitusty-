@@ -1,5 +1,9 @@
 package harkkatyo.rahalaskuri;
 
+import harkkatyo.rahalaskuri.komennot.Hallinnoi;
+import harkkatyo.rahalaskuri.komennot.LisaaTulo;
+import harkkatyo.rahalaskuri.komennot.LisaaMeno;
+
 public class Rahalaskuri {
 
     public static void main(String[] args) {

@@ -1,4 +1,8 @@
-package harkkatyo.rahalaskuri;
+package harkkatyo.rahalaskuri.komennot;
+
+import harkkatyo.rahalaskuri.Kysyja;
+import harkkatyo.rahalaskuri.komennot.LisaaTulo;
+import harkkatyo.rahalaskuri.komennot.LisaaMeno;
 
 /**
  * Hallinnoi-luokka vastaa tietojen hallinnointiin liittyvistä komennoista ja on
@@ -125,6 +129,19 @@ public class Hallinnoi {
         System.out.println("[1] Poista kategoria");
         System.out.println("[2] Nollaa kategorian arvo");
         System.out.println("[3] Poista kaikki");
+        String komento = kysyja.merkkijono();
+
+        if (komento.equals("1")) {
+            lisaatulo.poistaKategoria();
+        }
+
+        if (komento.equals("2")) {
+            lisaatulo.nollaaKategoria();
+        }
+
+        if (komento.equals("3")) {
+            lisaatulo.poistaKaikki();
+        }
     }
 
     /**

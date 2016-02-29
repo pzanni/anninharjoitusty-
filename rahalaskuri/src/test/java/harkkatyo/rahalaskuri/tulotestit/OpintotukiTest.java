@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package harkkatyo.rahalaskuri;
+package harkkatyo.rahalaskuri.tulotestit;
 
-import harkkatyo.rahalaskuri.Opintotuki;
+import harkkatyo.rahalaskuri.tulot.Opintotuki;
+import harkkatyo.rahalaskuri.tulot.Opintotuki;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -18,33 +19,34 @@ import static org.junit.Assert.*;
  * @author pzanni
  */
 public class OpintotukiTest {
+
     Opintotuki optuki;
     private static final double PIENILUKU = Double.MIN_VALUE;
-    
+
     @Before
     public void setUp() {
         optuki = new Opintotuki();
     }
-    
-    @Test 
+
+    @Test
     public void tuenMaaranAsettaminenToimii() {
         optuki.asetaOpintotuenMaara(300);
         assertEquals(300, optuki.getNosto(), PIENILUKU);
     }
-    
-    @Test 
+
+    @Test
     public void eiNegatiivistaTukea() {
         optuki.asetaOpintotuenMaara(-30);
         assertEquals(0, optuki.getNosto(), PIENILUKU);
     }
-    
+
     @Test
     public void tukikuukaudenLisaysToimii() {
         optuki.asetaOpintotuenMaara(300);
         optuki.lisaaTukikuukausi();
         assertEquals("300.0 1kk", optuki.toString());
     }
-    
+
     @Test
     public void useatLisayksetSummaantuvat() {
         optuki.asetaOpintotuenMaara(300);
@@ -53,13 +55,13 @@ public class OpintotukiTest {
         optuki.lisaaTukikuukausi();
         assertEquals("900.0 3kk", optuki.toString());
     }
-    
+
     @Test
     public void kuukaudetEivatLisaannyIlmanTukea() {
         optuki.lisaaTukikuukausi();
         assertEquals("0.0 0kk", optuki.toString());
     }
-    
+
     @Test
     public void tuenMaaranVaihtoOnnistuu() {
         optuki.asetaOpintotuenMaara(300);
@@ -69,5 +71,4 @@ public class OpintotukiTest {
         assertEquals("800.0 2kk", optuki.toString());
     }
 
-    
 }

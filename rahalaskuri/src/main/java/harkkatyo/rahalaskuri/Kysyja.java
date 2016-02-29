@@ -22,20 +22,24 @@ public class Kysyja {
     }
 
     /**
+     * käyttäjä syöttää merkkijonon josta metodi poistaa whitespacet ja muuttaa
+     * kaikki kirjaimet pieniksi ja palauttaa muunnellun merkkijonon.
+     * @return 
+     */
+    
+    public String trimmattuMerkkijono() {
+        String jono = lukija.nextLine();
+        jono.trim().toLowerCase();
+        return jono;
+    }
+    
+     /**
      * Metodi palauttaa käyttäjän syöttämän merkkijonon.
      *
      */
+    
     public String merkkijono() {
         return lukija.nextLine();
-    }
-
-    /**
-     * metodi palauttaa käyttäjän syöttämän kokonaisluvun.
-     *
-     * @return
-     */
-    public int kokonaisluku() {
-        return Integer.parseInt(lukija.nextLine());
     }
 
     /**
@@ -44,7 +48,16 @@ public class Kysyja {
      * @return
      */
     public double liukuluku() {
-        return Double.parseDouble(lukija.nextLine());
+
+        Double luku = 0.0;
+        try {
+            luku = Double.parseDouble(lukija.nextLine());
+
+        } catch (NumberFormatException e) {
+            System.out.println("Annoit epäkelvollisen liukuluvun!");
+        }
+
+        return luku;
     }
 
 }
