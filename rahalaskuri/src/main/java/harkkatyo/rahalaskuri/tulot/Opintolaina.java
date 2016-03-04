@@ -23,7 +23,7 @@ public class Opintolaina {
      * @param uusiNosto
      */
     public void vaihdaOpintolaina(double uusiNosto) {
-        if (uusiNosto >=0) {
+        if (uusiNosto >= 0) {
             nosto = uusiNosto;
         } else {
             System.out.println("Lainan tulee olla positiivinen luku.");

@@ -1,13 +1,10 @@
 package harkkatyo.rahalaskuri.tulot;
-
 import harkkatyo.rahalaskuri.Kysyja;
 import java.util.HashMap;
-
 /**
  * Tulot-luokka vastaa kaikista tuloista ja niihin liittyvistä olioista eli
  * kaikki tuloihin liittyvät toiminnot menevät tulot-luokan kautta, tulot-luokka
  * myös vastaa käyttäjän merkitsemien tulojen yhteenvedosta.
- *
  * @author pzanni
  */
 public class Tulot {
@@ -26,7 +23,6 @@ public class Tulot {
         muut = new HashMap<>();
         kysyja = new Kysyja();
     }
-
     /**
      * metodi tarkastaa ensin onko opintotukea lisätty aiemmin, jos ei ole se
      * kysyy opintotuen määrää ja asettaa sen pysyväksi opintotuen määräksi sekä
@@ -42,7 +38,6 @@ public class Tulot {
         opintotuki.lisaaTukikuukausi();
         yhteensa = yhteensa + opintotuki.getNosto();
     }
-
     /**
      * metodi asettaa opintotuki-olion luokan muuttujan arvoksi parametrinä
      * saadun arvon.
@@ -80,7 +75,6 @@ public class Tulot {
 
     /**
      * metodi kutsuu opintolaina-olion metodia saadulla parametrin arvolla.
-     *
      * @param arvo
      */
     public void vaihdaOpintolaina(double arvo) {
@@ -89,7 +83,6 @@ public class Tulot {
 
     /**
      * metodi kutsuu opintolaina-olion metodia saadulla parametrin arvolla.
-     *
      * @param arvo
      */
     public void vahennaOpintolainaa(double arvo) {
@@ -98,7 +91,6 @@ public class Tulot {
 
     /**
      * metodi kutsuu palkka-olion metodia saadulla parametrin arvolla.
-     *
      * @param arvo
      */
     public void lisaaPalkanmaksu(double arvo) {
@@ -127,7 +119,6 @@ public class Tulot {
      * se lisää kyseisen avaimen arvon olioon parametrinä saadun arvon, jos ei
      * se laittaa hashmappiin uuden kategoriaa vastaavan avaimen ja luo sille
      * uuden muutulo-olion.
-     *
      * @param kategoria
      * @param arvo
      */
@@ -145,7 +136,6 @@ public class Tulot {
      * metodi tarkastaa ensin onko muut-hashmapissa parametrina saatua
      * merkkijonoa avaimena, jos on niin se laittaa kys avaimen kohdalle uuden
      * muutulo-olion jonka arvo on 0.
-     *
      * @param kategoria
      */
     public void nollaaKategoria(String kategoria) {
@@ -157,7 +147,6 @@ public class Tulot {
     /**
      * metodi tarkastaa ensin onko hashmapissä parametrina saatua avainta, jos
      * on niin metodi poistaa kyseisen avaimen ja sen arvon.
-     *
      * @param kategoria
      */
     public void poistaKategoria(String kategoria) {
@@ -176,7 +165,6 @@ public class Tulot {
     /**
      * metodi tulostaa muut-hashmapin siisteinä riveinä jossa näkyy kategoria ja
      * sitä vastaava arvo.
-     *
      * @return
      */
     public String muutTulotString() {
@@ -201,7 +189,7 @@ public class Tulot {
     public Opintolaina getOpintolaina() {
         return opintolaina;
     }
-
+    
     public Palkka getPalkka() {
         return palkka;
     }
@@ -213,5 +201,4 @@ public class Tulot {
     public String toString() {
         return "Opintotuki: " + opintotuki.toString() + "\nOpintolaina: " + opintolaina.toString() + "\nPalkka: " + palkka.toString() + "\n" + this.muutTulotString() + "\nYhteensä: " + yhteensa;
     }
-
 }

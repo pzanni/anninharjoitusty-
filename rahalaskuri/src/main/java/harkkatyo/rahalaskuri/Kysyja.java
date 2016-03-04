@@ -29,7 +29,8 @@ public class Kysyja {
     
     public String trimmattuMerkkijono() {
         String jono = lukija.nextLine();
-        jono.trim().toLowerCase();
+        jono = jono.trim().toLowerCase();
+        
         return jono;
     }
     

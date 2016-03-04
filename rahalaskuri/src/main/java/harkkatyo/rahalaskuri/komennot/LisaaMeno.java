@@ -26,7 +26,7 @@ public class LisaaMeno {
      */
     public void suorita() {
         System.out.println("Anna kategoria");
-        String kategoria = kysyja.merkkijono();
+        String kategoria = kysyja.trimmattuMerkkijono();
         System.out.println("Anna arvo");
         double arvo = kysyja.liukuluku();
 
@@ -39,7 +39,7 @@ public class LisaaMeno {
      */
     public void poistaMeno() {
         System.out.println("Anna poistettava kategoria");
-        String nimi = kysyja.merkkijono();
+        String nimi = kysyja.trimmattuMerkkijono();
         menot.poistaKategoria(nimi);
     }
 
@@ -49,7 +49,7 @@ public class LisaaMeno {
      */
     public void nollaaKategorianArvo() {
         System.out.println("Anna nollattava kategoria");
-        String nimi = kysyja.merkkijono();
+        String nimi = kysyja.trimmattuMerkkijono();
         menot.nollaaKategoria(nimi);
     }
 

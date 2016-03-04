@@ -110,4 +110,5 @@ public class MenotTest {
         menot.lisaaMeno("burger king", 0);
         assertEquals("", menot.toString());
     }
+    
 }

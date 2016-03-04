@@ -123,7 +123,8 @@ public class Hallinnoi {
     }
 
     /**
-     * muutulo-metodi on kesken vielä.
+     * muutulo-metodi tulostaa muiden tulojen hallintaan littyvät vaihtoehdot,
+     * kysyy käyttäjältä komentoa ja toimii sen mukaan.
      */
     public void muutulo() {
         System.out.println("[1] Poista kategoria");
