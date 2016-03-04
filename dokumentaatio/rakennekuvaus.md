@@ -7,6 +7,7 @@ vastuussa menoihin liityvistä komennoista, joten se on yhteydessä Menot-luokka
 ja myös Kysyja-luokkaan. Hallinnoi-luokka vastaa menojen ja tulojen hallinnointiin
 liittyvistä komennoista, joten se on yhteydessä sekä LisaaTulo-luokkaan että 
 LisaaMeno-luokkaan. Ja myös tietenkin Kysyja-luokkaan.
+
 Tulot-luokka on vastuussa kaikista tuloihin liittyvistä luokista, joten se on 
 yhteydessä luokkiin Palkka, Opintolaina, Opintotuki ja MuuTulo. Menot luokka on 
 vastaava luokka menoille eli se on yhteydessä luokkaan Meno. Menot-luokka pitää
