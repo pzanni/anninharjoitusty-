@@ -65,4 +65,4 @@ tulot yhteissummaan tulorajan täyttymisestä huolimatta. Jos haluat nollata mer
 palkan yhteissumman, kirjoita 2 ja paina enter. Jos haluat poistaa tulorajan
  käytöstä kirjoita 3 ja paina enter.
 ####Muiden tulojen hallinnointi
-Kirjoita 4 ja paina enter.
+Kirjoita 4 ja paina enter. Jos haluat poistaa yksittäisen kategorian, kirjoita 1 ja paina enter. Ohjelma kysyy tämän jälkeen poistettavan kategorian nimeä. Kirjoita kategorian nimi ja paina enter. Jos haluat nollata jonkun kategorian arvon, kirjoita 2 ja paina enter. Kirjoita tämän jälkeen nollattava kategorian nimi ja paina enter. Jos taas haluat poistaa kaikki kategoriat, kirjoita 3 ja paina enter.
