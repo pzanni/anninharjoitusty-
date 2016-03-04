@@ -35,3 +35,6 @@
 
 ##29.2.2016
 2h: koodin ja testien viimeistelyä
+
+##4.3.2016
+2h: loppupalautuksen muistilistan läpikäymistä 
