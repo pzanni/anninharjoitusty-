@@ -43,3 +43,10 @@ Rahalaskuriin voi kirjata menot ja tulot ja se pitää kirjaa niistä. Rahalasku
 
 ![luokkakaavio](https://github.com/pzanni/anninharjoitusty-/blob/master/dokumentaatio/luokkis3.JPG?raw=true)
 
+##Sekvenssikaaviot
+
+![sekvenssi1](https://github.com/pzanni/anninharjoitusty-/blob/master/dokumentaatio/sekvenssi1.png?raw=true)
+
+![sekvenssi2](https://github.com/pzanni/anninharjoitusty-/blob/master/dokumentaatio/sekvenssi2.png?raw=true)
+
+![sekvenssi3](https://github.com/pzanni/anninharjoitusty-/blob/master/dokumentaatio/sekvenssi3.png?raw=true)
