@@ -1,5 +1,5 @@
 ##Aihe:rahalaskuri 
-Rahalaskuriin voi kirjata menot ja tulot ja se pitää kirjaa niistä. Rahalaskuri on tarkoitettu erityisesti opiskelijoille ja se laskee esimerkiksi kertyneen opintolainan. Rahalaskuri osaa kertoa myös tilastoja ja keskiarvoja rahatuloista ja -menoista. Rahalaskuri kategorisoi menot ja pitää niistä kirjaa. Käyttäjä voi halutessaan saada tietää paljonko kuhunkin kategoriaan kuluu.
+Rahalaskuriin voi kirjata menot ja tulot ja se pitää kirjaa niistä. Rahalaskuri on tarkoitettu erityisesti opiskelijoille ja se laskee esimerkiksi kertyneen opintolainan. Rahalaskuri kategorisoi menot ja pitää niistä kirjaa. Käyttäjä voi halutessaan saada tietää paljonko kuhunkin kategoriaan kuluu.
 
 ##Käyttäjä:
 ###opiskelija
@@ -18,6 +18,11 @@ Rahalaskuriin voi kirjata menot ja tulot ja se pitää kirjaa niistä. Rahalasku
 -kirjattujen tulojen tulostaminen kategorioittain
 
 -kirjattujen menojen tulostaminen kategorioittain
+
+-palkan tulorajan asettaminen
+
+-opintolainan/opintotuen/palkan/muu tulo -kategorian nollaus
+
 
 ##Luokkakaavio
 
