@@ -19,10 +19,25 @@ Rahalaskuriin voi kirjata menot ja tulot ja se pitää kirjaa niistä. Rahalasku
 
 -kirjattujen menojen tulostaminen kategorioittain
 
--palkan tulorajan asettaminen
+-palkan tulorajan asettaminen/muuttaminen/poisto
 
 -opintolainan/opintotuen/palkan/muu tulo -kategorian nollaus
 
+-opintotukikuukausilaskennan nollaus
+
+-opintolainan vähennys
+
+-opintolainan noston arvon muuttaminen
+
+-meno-kategorian nollaus
+
+-meno-kategorian poisto
+
+-kaikkien meno-kategorioitten poisto
+
+-muu tulo -kategorian poisto
+
+-kaikkien muu tulo -kategorioitten poisto
 
 ##Luokkakaavio
 
